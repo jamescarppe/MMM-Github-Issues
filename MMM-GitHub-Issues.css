@@ -1,0 +1,7 @@
+.gh-issues td:not(:last-child) {
+  padding-right: 1em;
+}
+
+.gh-issues td {
+  white-space: nowrap;
+}
