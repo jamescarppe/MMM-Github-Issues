@@ -88,9 +88,14 @@ Module.register('MMM-GitHub-Issues', {
           const issueRow = document.createElement('tr');
           const issueEntry = document.createElement('td');
           issueEntry.style.paddingLeft = '1em';
-          issueEntry.colSpan = 3;
+          issueEntry.colSpan = 2;
           issueEntry.innerText = `#${issue.number} ${issue.title}`;
           issueRow.append(issueEntry);
+          const issueCommments = document.createElement('td');
+          issueCommments.style.paddingRight = '1em';
+          issueCommments.colspan = 1;
+          issueCommments.innerHTML = `${issue.comments} <i class="far fa-comment-alt"></i>`;
+          issueRow.append(issueCommments);          
           table.append(issueRow);
       }
     }
